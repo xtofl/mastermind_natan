@@ -8,7 +8,7 @@ from tkinter import (Button,
                      Label,
                      messagebox)
 
-import MasterMindAsked
+from . import MasterMindAsked
 import random
 
 ALL_COLORS = ("red", "green", "blue", "yellow", "orange", "white")
@@ -197,7 +197,12 @@ def color(color_name):
 
 
 
-root = Tk()
-draw_board(root)
-random_combination = MasterMindAsked.create_combination(NUMBER_OF_CIRCLES)
-root.mainloop()
+def main():
+    root = Tk()
+    draw_board(root)
+    random_combination = MasterMindAsked.create_combination(NUMBER_OF_CIRCLES)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()

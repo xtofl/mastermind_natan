@@ -4,6 +4,12 @@ version = "0.1.0"
 description = "Mastermind"
 authors = ["natan"]
 license = "LGPLv3"
+packages = [
+   { include = "nmastermind", from="src" }
+]
+
+[tool.poetry.scripts]
+natan-mastermind = "nmastermind.GUI:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
